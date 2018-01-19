@@ -26,7 +26,7 @@
 
         </div>
 
-    </div><!-- close row 2 -->
+    </div><!-- close timer / row 2 -->
 
     <!-- Current Question / row 3 ==============================-->
     <div class="row"> 
@@ -34,50 +34,67 @@
     </div> <!-- close row 3 -->
 <button class="btn btn-lg btn-primary center-block" id="startButton">Click Me</button>
 </div><!--close first container -->
-<div class="container">
+<div class="container" id="bottom">
           
     <div id="answers" class="row container"> <!-- answer choices / row 4 ======================================-->
-        <h3 class="col-md-8 col-md-offset-2" id="answer0"></h3>
-        <h3 class="col-md-8 col-md-offset-2" id="answer1"></h3>
-        <h3 class="col-md-8 col-md-offset-2" id="answer2"></h3>
-        <h3 class="col-md-8 col-md-offset-2" id="answer3"></h3>
+        <h3 class="col-md-8 col-md-offset-1" id="answer0"></h3>
+        <h3 class="col-md-8 col-md-offset-1" id="answer1"></h3>
+        <h3 class="col-md-8 col-md-offset-1" id="answer2"></h3>
+        <h3 class="col-md-8 col-md-offset-1" id="answer3"></h3>
 
     </div> <!-- close row  4-->
-
     
-    <!-- hidden  correct/incorrect choices, final screen======================================================================================= -->
-    <div id="correct" class = "jumbotron">
-        <h2>That's CORRECT!</h2>
-        <h4>The answer was: <span id = "goodAnswer"></span></h4>
-        <div id = "correct-image"></div>
-    </div>
-
-    <div id="wrong" class = "jumbotron">
-        <h2>Not even CLOSE!</h2>
-        <h4>The answer was: <span id = "badAnswer"></span></h4>
-        <div id = "wrong-image"></div>
-    </div>
-
-    <div id="timeUp" class = "jumbotron">
-        <h2>Out of TIME!</h2>
-        <h4>The answer was: <span id = "noAnswer"></span></h4>
-        <div id="buzzer-image"></div>
-    </div>
-
-    <div id="results" class = "jumbotron">
-        <h2>Results</h2>
-        <ul>
-            <li>Correct: <span id = "result1"></span></li>
-            <li>Wrong: <span id = "result2"></span></li>
-            <li>Unanswered: <span id = "result3"></span></li>
-        </ul>
-        <div id ="final-image"></div>
-        <button class = "btn btn-lg btn-primary center-block" id = "reset">Try Again?</button>
-    </div> <!-- close results div -->
-
-    <!-- <img class = "img-responsive center-block" src="C:\Users\JohnD\Desktop\TriviaGame\assets\images\super-saiyan.gif"> -->
    
 </div>  <!-- close container div 2 -->
+
+    <!-- hidden  correct/incorrect choices, final screen  ======================================================================================= -->
+
+    <div id="correct" class = "col-sm-6 col-sm-offset-3 col-xs-offset-0">
+        <div id="correctDiv">
+            <h2>That's CORRECT!</h2>
+            <h4>The answer was: <span id = "goodAnswer"></span></h4>
+        </div>    
+    
+        <div class = "center-block" id="correct-image"><img src="C:\Users\JohnD\Desktop\TriviaGame\assets\images\spirit-bomb.gif"></div>
+    </div>
+
+    <div id="wrong" class = "col-sm-6 col-sm-offset-3 col-xs-offst-0">
+        <div id="wrongDiv">
+            <h2>Not even CLOSE!</h2>
+            <h4>The answer was: <span id = "badAnswer"></span></h4>
+        </div>
+        
+        <div class = "center-block" id = "wrong-image"><img src = "C:\Users\JohnD\Desktop\TriviaGame\assets\images\trunks-fail.gif"> </div>
+    </div>
+
+    <div id="timeUp" class = "col-sm-6 col-sm-offset-3 col-xs-offset-0">
+        <div id="buzzDiv">
+            <h2>Out of TIME!</h2>
+            <h4>The answer was: <span id = "noAnswer"></span></h4>
+        </div>    
+                    
+        <div class = "center-block" id="buzzer-image"><img src="C:\Users\JohnD\Desktop\TriviaGame\assets\images\goku-parry.gif"></div>
+    </div>
+
+    <div id="results" class = "jumbotron col-sm-10 col-sm-offset-1 col-xs-offset-0">
+        <di class="row">
+            <div class="col-md-7 col-sm-3">
+                <h2>Results:</h2>
+                <ul>
+                    <li>Correct: <span id = "result1"></span></li>
+                    <li>Wrong: <span id = "result2"></span></li>
+                    <li>Unanswered: <span id = "result3"></span></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-md-offset-1 col-sm-offset-0">
+                <div id ="final-image"><img src = "C:\Users\JohnD\Desktop\TriviaGame\assets\images\dbz-opening.gif"></div>
+                <button class = "btn btn-lg btn-primary center-block" id = "reset">Try Again?</button>
+            </div>
+        </di>
+        
+        
+    </div> <!-- close results div -->    
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

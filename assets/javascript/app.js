@@ -37,7 +37,8 @@ var timeUpCount = 0; // not answered in time
 $(document).ready(function() {
  //functions=======================================================================
     function startingScreen() {
-        $("#answers").hide();
+        $("#timer").hide();
+        $("#bottom").hide();
         $("#question").show();
         $("#question").html("Click Button to Start!");
         //$("#answers").html("<button class='btn btn-primary' style='font-size: 100px; margin: 30px'>Click Me</button>");
@@ -47,7 +48,8 @@ $(document).ready(function() {
     
     function startGame() {
         $("#startButton").hide();
-        $("#answers").show();
+        $("#timer").show();
+        $("#bottom").show();
         timerStart();
         questionShow();
         //console.log(answers[questionCounter]);
@@ -118,15 +120,15 @@ $(document).ready(function() {
 
         console.log(correctAnswer);
         if(answerChoice === correctAnswer) {
-            $("#answers").hide();
+            $("#bottom").hide();
             $("#question").hide();
             correctPage();
-            setTimeout(nextQuestion, 2000);
+            setTimeout(nextQuestion, 3000);
         } else {
-            $("#answers").hide();
+            $("#bottom").hide();
             $("#question").hide();
             wrongPage();
-            setTimeout(nextQuestion, 2000);
+            setTimeout(nextQuestion, 3000);
         }
     }
 
@@ -135,14 +137,14 @@ $(document).ready(function() {
     
     
     function timesUp() {
-        $("#answers").hide();
+        $("#bottom").hide();
         $("#question").hide();
         $("#timeUp").show();
         $("#noAnswer").html(correctAnswers[questionCounter]);
         questionCounter++;
         timeUpCount++;
         clockRunning = false;
-        setTimeout(nextQuestion, 2000);
+        setTimeout(nextQuestion, 3000);
     }
 
     function wrongPage() {
@@ -166,12 +168,14 @@ $(document).ready(function() {
         $("#correct").hide();
         $("#wrong").hide();
         $("#timeUp").hide();
+
         if(questionCounter === 7) {
             results();
         } else {
+            $("#bottom").show();
             console.log(questionCounter);
             $("#question").show();
-            $("#answers").show();
+            
             questionShow();
             timerStart();
         }

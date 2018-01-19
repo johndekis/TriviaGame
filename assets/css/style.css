@@ -10,6 +10,7 @@ h1 {
     font-weight: bold;
     border-left: 6px solid black;
     padding-left: 15px;
+    text-shadow: 4px 4px rgb(85, 79, 79);
 
 }
 
@@ -22,12 +23,14 @@ h2 {
 h3 {
     border-left: 3px solid black;
     padding-left: 10px;
+    font-weight: bold;
 
 }
 
 h3:hover {
     outline: 4px solid orange;
-}
+    font-size: 25px;
+   }
 
 h1, h2, h3, #timer {
     opacity: 1;
@@ -37,15 +40,15 @@ button {
     font-size: 50px;
 }
 
-#startButton {
+#startButton, #reset {
     font-size: 50px; 
     margin-bottom: 30px;
     font-weight: bold;
 }
 
 #answers {
+    height: 300px;
     
-    border: 8px solid orange;
     text-align: left;
 }
 
@@ -57,11 +60,21 @@ button {
     text-align: center;
 }
 
+#timer:hover {
+    font-size:75px;
+    color: aqua;
+}
+
+#question {
+    border-right: 3px solid white;
+}
+
 #correct, 
 #wrong,
 #timeUp,
 #results {
     display: none;
+
 }
 
 
@@ -70,8 +83,95 @@ button {
     background-size: auto 100%;
     opacity: .9;
     background-color: lightblue;
+    border: 8px solid white;
+}
+
+#bottom {
+    background-image: url("../images/saiyan-blast-right.jpg");
+    background-size: 100% auto;
+    background-position:right;
+    border: 8px solid orange;
+    
+}
+
+/*#correct {
+    background-image: url("../images/spirit-bomb.gif");
+    background-position: center;
+    width: 500px;
+    border: 10px solid white;
+    
+    
+}
+*/
+#wrong-image, #buzzer-image, #correct-image {
+    width: 500px;
+    overflow: hidden;
+    border: 8px solid white;
+    
+
+}
+
+#wrongDiv, #correctDiv, #buzzDiv, #final-image {
+    margin: 10px;
+    border: 5px solid white;
+    text-align: center;
+}
+
+
+
+#results {
+    background-image: url("../images/results3.jpg");
+    background-size: 100% auto;
+    background-position: bottom;
+    border: 8px solid white;
+    color: black;
+}
+
+
+#results li {
+    font-size: 50px;
 }
 
 .jumbotron {
     margin-top: 40px;
+    height: 400px;
+    background-repeat: no-repeat;
+    
+}
+
+@media (max-width: 1168px) {
+    #results {
+        background-size: auto 100%;
+    }
+}
+
+@media (max-width:995px) {
+    #final-image {
+        border: none;
+    }
+    #results li {
+        font-size: 30px;
+    }
+    #correct-image {
+        transform: scale(.75);
+        margin:0;
+    }
+}
+
+@media (max-width:600px) {
+    #question {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #bottom {
+        background-size: auto 100%;
+    }
+    #correct {
+        left:0;
+    }
+    #results li {
+        font-size: 25px;
+    }
 }
