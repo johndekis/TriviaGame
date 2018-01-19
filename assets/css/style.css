@@ -1,0 +1,77 @@
+body {
+    background-image: url("../images/king-kai-planet.jpg");
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+} 
+
+h1 {
+    font-size: 75px;
+    font-weight: bold;
+    border-left: 6px solid black;
+    padding-left: 15px;
+
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h3 {
+    border-left: 3px solid black;
+    padding-left: 10px;
+
+}
+
+h3:hover {
+    outline: 4px solid orange;
+}
+
+h1, h2, h3, #timer {
+    opacity: 1;
+}
+
+button {
+    font-size: 50px;
+}
+
+#startButton {
+    font-size: 50px; 
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#answers {
+    
+    border: 8px solid orange;
+    text-align: left;
+}
+
+#timer {
+    font-size: 70px;
+    font-weight:bold;
+    border: 5px solid black;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#correct, 
+#wrong,
+#timeUp,
+#results {
+    display: none;
+}
+
+
+#top {
+    background-image: url("../images/dbz-background2.png");
+    background-size: auto 100%;
+    opacity: .9;
+    background-color: lightblue;
+}
+
+.jumbotron {
+    margin-top: 40px;
+}
